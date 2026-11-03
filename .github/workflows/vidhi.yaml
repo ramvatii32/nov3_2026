@@ -17,4 +17,8 @@ jobs:
        uses: actions/checkout@v4
      - name: mystep3-check the source ocde
        run: ls -al
+     - name: mystep4-docker image build
+       run: docker image build -t ramvatii32/myimage_nov3:t${{ github.run_number }} -f Dockerfile .
+     - name: mystep5-check te docker images
+       run: docker images
 
